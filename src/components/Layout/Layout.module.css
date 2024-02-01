@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+}
+
+.dashboard{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+.topBaseGradients{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.topBaseGradients>:nth-child(2){
+    left: 40%;
+}
+
+.topBaseGradients>:nth-child(3){
+    right: 0;
+}
