@@ -6,14 +6,13 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
-
-    const {pathname} = useLocation()
+  const { pathname } = useLocation();
 
   return (
     <div className={css.container}>
       <Sidebar />
 
-      {pathname==='/' && <Navigate to="/dashboard"/>}
+      {pathname === "/" && <Navigate to="/dashboard" />}
 
       <div className={css.dashboard}>
         <div className={css.topBaseGradients}>
@@ -38,10 +37,9 @@ const Layout = () => {
               <span>durgeshkodan101@gmail.com</span>
             </div>
           </div>
-
-          <div className={css.content}>
-            <Outlet />
-          </div>
+        </div>
+        <div className={css.content}>
+          <Outlet />
         </div>
       </div>
     </div>
