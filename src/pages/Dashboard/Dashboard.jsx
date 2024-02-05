@@ -1,5 +1,7 @@
 import React from "react";
 import css from "./Dashboard.module.css";
+import { cardsData, groupNumber } from "../../data/index.js";
+import Statistics from "../../components/Statistics/Statistics.jsx";
 
 const Dashboard = () => {
   return (
@@ -17,14 +19,30 @@ const Dashboard = () => {
               </select>
             </div>
           </div>
-          <div className={css.cards}>Cards</div>
+          <div className={css.cards}>
+            {cardsData.map((card, index) => (
+              <div className={css.card}>
+                <div className={css.cardHead}>
+                  <span>{card.title}</span>
+                  <span>+{card.change}</span>
+                </div>
+
+                <div className={css.cardAmount}>
+                  <span>$</span>
+                  <span>{groupNumber(card.amount)}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <Statistics/>
+
       </div>
 
-      <div className={css.orders}>raja</div>
+      <div className={css.orders}>{}</div>
     </div>
   );
 };
-
 
 export default Dashboard;
