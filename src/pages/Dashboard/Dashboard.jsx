@@ -37,13 +37,10 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <Statistics/>
-
+        <Statistics />
       </div>
 
-      <div className={css.orders}>
-        <Orders/>
-      </div>
+      <Orders />
     </div>
   );
 };

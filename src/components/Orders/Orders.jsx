@@ -1,4 +1,5 @@
 import { groupNumber, ordersData } from "../../data";
+import OrdersPieChart from "../OrdersPieChart/OrdersPieChart";
 import css from "./Orders.module.css";
 
 const Orders = () => {
@@ -26,6 +27,12 @@ const Orders = () => {
           </div>
         ))}
       </div>
+
+      <div className={css.orderChart}>
+        <span>split by order</span>
+        <OrdersPieChart/>
+      </div>
+
     </div>
   );
 };
